@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News App</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/43255af431.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="main-nav-1">
+        <div class="main-nav flex container">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="./news-app-low-resolution-logo-color-on-transparent-background (1).png" alt="">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                    <li class="hover-link nav-item" id="trending" onclick="onNavItemClick('trending')">Trending</li>
+                </ul>
+            </div>
+            <div class="search-bar">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g.Science">
+                <button id="search-button" class="search-button">Search</button>
+                
+                <button class="dark-icon" onclick="toggleDarkMode()">
+                    <i class="fa-solid fa-moon fa-2xl" style="color: #005eff;"></i>
+                </button>
+                
+                
+            </div>
+
+        </div>
+
+
+        <button class="burger" onclick="toggleMenu()"></button>
+        <div class="menu">
+          <nav>
+            <img style="animation-delay: 0.1s" class="nav-2-img" src="./news-app-low-resolution-logo-color-on-transparent-background (1).png" alt="">
+            <a href="#" style="animation-delay: 0.2s "><li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">IPL</li></a>
+            <a href="#" style="animation-delay: 0.3s"><li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li></a>
+            <a href="#" style="animation-delay: 0.4s"><li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li></a>
+            <a href="#" style="animation-delay: 0.5s"><li class="hover-link nav-item" id="trending" onclick="onNavItemClick('trending')">Trending</li></a>
+          </nav>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+            
+        </div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+            </div>
+        </div>
+    </template>
+</body>
+</html>
